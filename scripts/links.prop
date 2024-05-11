@@ -1,3 +1,10 @@
 git/.gitconfig=.gitconfig
-waybar/=.config/waybar
-hypr/=.config/hypr
+waybar/=.config/
+hypr/=.config/
+alacritty/=.config/
+fish/=.config/
+fastfetch/=.config/
+htop/=.config/
+gtk-2.0/=.config/
+gtk-3.0/=.config/
+gtk-4.0/=.config/

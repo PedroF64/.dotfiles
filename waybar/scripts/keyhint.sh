@@ -14,7 +14,7 @@ yad --width=530 --height=620 \
 --timeout-indicator=right \
 "ESC" "close this app" "" "=" "modkey" "(set mod Mod4)" \
 "+Shift+g" "G-hyprland" "implement G-Hyprland" \
-"+enter/+t" "Terminal" "(foot)" \
+"+enter/+t" "Terminal" "(alacritty)" \
 "+d" "Application Menu" "(wofi)" \
 "+Shift+d" "Full Launcher" "(nwggrid)" \
 "+o" "" "Open Broswer" \

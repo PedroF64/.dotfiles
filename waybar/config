@@ -5,11 +5,11 @@
     "width": 1920,
     "margin-bottom": 0,
     "modules-left": [
-      "clock"
+      "clock",
       // "custom/separator",
       // "hyprland/workspaces",
-      // "custom/separator",
-      // "tray"
+      "custom/separator",
+      "tray"
     ],
     "modules-center": [
       // "hyprland/window"
@@ -132,12 +132,12 @@
     "memory": {
       "format": "󰫗 {}% ",
       "tooltip": "false",
-      "on-click": "foot -e htop"
+      "on-click": "alacritty -e htop"
     },
     "cpu": {
       "format": " {usage}% ",
       "tooltip": "false",
-      "on-click": "foot -e htop"
+      "on-click": "alacritty -e htop"
     },
     "pulseaudio": {
       "scroll-step": 3, // %, can be a float
