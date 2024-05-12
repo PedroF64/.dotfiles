@@ -2,14 +2,18 @@
     "layer": "top",
     "position": "top",
     "height": 40,
-    "width": 1920,
+    "width": "100%",
+    "margin-top": 10,
     "margin-bottom": 0,
+    "margin-left": 10,
+    "margin-right": 10,
     "modules-left": [
       "clock",
       // "custom/separator",
       // "hyprland/workspaces",
       "custom/separator",
-      "tray"
+      "tray",
+      "custom/playerctl"
     ],
     "modules-center": [
       // "hyprland/window"
@@ -180,15 +184,22 @@
       },
       "exec-if": "which waybar-module-pacman-updates",
       "exec": "waybar-module-pacman-updates",
-      "on-click": "foot -e update"
+      "on-click": "alacritty -e update"
     },
     "custom/keyboard-layout": {
       "format": " Cheat", // Icon: keyboard
-      "on-click": "~/.config/waybar/scripts/keyhint.sh",
+      "on-click": "~/.config/waybar/scripts/keyhint.sh"
     },
     "custom/powermenu": {
       "format": "  ",
       "tooltip": false,
       "on-click": "nwgbar"
+    },
+    "custom/playerctl": {
+      "type": "custom/script",
+      "exec": "~/.config/waybar/scripts/playerctl-module.sh",
+      "interval": 5,
+      "on-click": "playerctl play-pause"
     }
+
   }

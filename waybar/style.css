@@ -1,93 +1,101 @@
 * {
-  font-family: "Fira Code";
+    font-family: "Fira Code";
 }
 
 #waybar {
-  background: #171717;
-  color: #fff;
+    background: rgba(255, 255, 255, 0.1); /* Transparent background */
+    color: white; /* Text color */
+    border-radius: 10px; /* Rounded edges */
+    border: 2 solid rgba(51, 204, 238, 0.8); /* Border color */
 }
 
 #clock {
-  color: #fff;
+    color: #fff;
+    margin-left: 4px;
 }
 
 #tray {
-  padding-left: 4px;
+    padding-left: 4px;
 }
 
 #workspaces button:hover {
-  background-color: transparent;
+    background-color: transparent;
 }
 
 #workspaces button {
-  color: #737373;
-  padding-left: 4px;
-  padding-right: 4px;
-  border-radius: 0px;
+    color: grey;
+    padding-left: 4px;
+    padding-right: 4px;
+    border-radius: 0px;
 }
 
 #workspaces button:hover {
-  background-color: #262626;
+    background-color: lightblue;
 }
 
 #workspaces button.active {
-  color: #84cc16;
+    color: greenyellow;
 }
 
 #window {
-  color: #fff;
+    color: #fff;
 }
 
 #network {
-  color: #3b82f6;
-  margin-right: 8px;
+    color: #3b82f6;
+    margin-right: 8px;
 }
 
 #pulseaudio {
-  color: #14b8a6;
-  margin-right: 8px;
+    color: #14b8a6;
+    margin-right: 8px;
 }
 
 #pulseaudio.muted {
-  color: #3b4252;
-  margin-right: 8px;
+    color: #3b4252;
+    margin-right: 8px;
 }
 
 #cpu {
-  color: #0ea5e9;
-  margin-right: 4px;
+    color: #0ea5e9;
+    margin-right: 8px;
 }
 
 #temperature {
-  color: #eab308;
-  margin-right: 4px;
+    color: #eab308;
+    margin-right: 4px;
 }
 
 #memory {
-  color: #d946ef;
-  margin-right: 4px;
+    color: #d946ef;
+    margin-right: 4px;
 }
 
 #custom-powermenu {
-  color: #f43f5e;
+    color: #f43f5e;
+    margin-right: 4px;
 }
 
 #backlight {
-  color: #ebcb8b;
-  margin-right: 4px;
+    color: #ebcb8b;
+    margin-right: 4px;
 }
 
 #battery {
-  color: white;
-  margin-right: 4px;
+    color: white;
+    margin-right: 4px;
 }
 
 #custom-keyboard-layout {
-  color: #d08770;
-  margin-right: 8px;
+    color: #d08770;
+    margin-right: 8px;
 }
 
 #custom-updates {
-  color: white;
-  margin-right: 12px;
+    color: white;
+    margin-right: 12px;
+}
+
+#custom-playerctl {
+    margin-left: 8px;
 }

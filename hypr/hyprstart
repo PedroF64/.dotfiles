@@ -17,3 +17,11 @@ export TERM=alacritty
 export MAIL=thunderbird
 
 # check /usr/local/bin/hyprstart 
+
+export LIBVA_DRIVER_NAME=nvidia
+export XDG_SESSION_TYPE=wayland
+export GBM_BACKEND=nvidia-drm
+export GBM_BACKEND=nvidia_drm
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+export WLR_DRM_NO_ATOMIC=1
+export SDL_DYNAMIC_API=/usr/lib64/libSDL2-2.0.so
