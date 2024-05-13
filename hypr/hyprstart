@@ -6,8 +6,8 @@ cd ~
 export XCURSOR_SIZE=24
 
 # text editor
-export MICRO_TRUECOLOR=1
-export EDITOR=/usr/bin/micro
+# export MICRO_TRUECOLOR=1
+# export EDITOR=/usr/bin/micro
 
 #browser
 export BROWSER=firedragon
@@ -18,10 +18,14 @@ export MAIL=thunderbird
 
 # check /usr/local/bin/hyprstart 
 
+export MOZ_ENABLE_WAYLAND=1
+
 export LIBVA_DRIVER_NAME=nvidia
 export XDG_SESSION_TYPE=wayland
 export GBM_BACKEND=nvidia-drm
-export GBM_BACKEND=nvidia_drm
 export __GLX_VENDOR_LIBRARY_NAME=nvidia
 export WLR_DRM_NO_ATOMIC=1
 export SDL_DYNAMIC_API=/usr/lib64/libSDL2-2.0.so
+
+export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORMTHEME=qt5ct

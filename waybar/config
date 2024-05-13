@@ -199,7 +199,9 @@
       "type": "custom/script",
       "exec": "~/.config/waybar/scripts/playerctl-module.sh",
       "interval": 5,
-      "on-click": "playerctl play-pause"
+      "on-click": "playerctl play-pause",
+      "on-scroll-up": "playerctl next",
+      "on-scroll-down": "playerctl previous"
     }
 
   }
