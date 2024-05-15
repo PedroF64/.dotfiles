@@ -12,7 +12,7 @@ export XCURSOR_SIZE=24
 #browser
 export BROWSER=firedragon
 #terminal
-export TERM=alacritty
+export TERM=kitty
 #mail
 export MAIL=thunderbird
 

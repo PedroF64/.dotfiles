@@ -1,0 +1,21 @@
+OS: Arch Linux
+WM: hyprland
+Compositor: wayland
+Bar: waybar
+wallpapers: wpaperd
+Terminal: kitty
+fetch: fastfetch
+Shell: fish
+
+Application Launcher: wofi
+Notification Deamon: dunst
+file explorer: dolphin
+
+screenlock: swaylock
+screenidle: swayidle
+Login manager: sddm
+
+Button bar: nwg-bar
+Launcher: nwg-drawer
+Look and feel: nwg-look
+Display management: nwg-displays
