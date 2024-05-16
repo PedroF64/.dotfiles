@@ -1,17 +1,17 @@
 #!/bin/bash
 
-# Check if Spotube is running
-if pgrep -x "spotube" > /dev/null; then
+# Check if spotify is running
+if pgrep -x "spotify" > /dev/null; then
 
-    # If Spotube is playing, get metadata for the currently playing track
-    metadata=$(playerctl -p Spotube metadata --format '{{artist}} - {{title}}')
+    # If spotify is playing, get metadata for the currently playing track
+    metadata=$(playerctl -p spotify metadata --format '{{artist}} - {{title}}')
     
     # Get current position and duration of the song
-    #current_position=$(playerctl -p Spotube position --format '{{duration(position)}}')
-    duration=$(playerctl -p Spotube metadata --format '{{duration(mpris:length)}}')
+    current_position=$(playerctl -p spotify position --format '{{duration(position)}}')
+    duration=$(playerctl -p spotify metadata --format '{{duration(mpris:length)}}')
 
     # Limit the length of the metadata string
-    max_length=40  # Adjust as needed
+    max_length=30  # Adjust as needed
     truncated_metadata=$(echo "$metadata" | awk '{ print substr($0, 1, '$max_length'); }')
     
     # Append "..." if the metadata was truncated
@@ -19,12 +19,12 @@ if pgrep -x "spotube" > /dev/null; then
         truncated_metadata+="..."
     fi
     
-    # Check if Spotube is playing
-    player_status=$(playerctl -p Spotube status)
+    # Check if spotify is playing
+    player_status=$(playerctl -p spotify status)
 
-    # If Spotube is playing, get metadata for the currently playing track
+    # If spotify is playing, get metadata for the currently playing track
     if [ "$player_status" = "Playing" ]; then
-        echo "$truncated_metadata | $duration"
+        echo "$truncated_metadata | $current_position - $duration"
         exit 0
     else
         echo "$truncated_metadata | PAUSED"

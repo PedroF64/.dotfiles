@@ -1,207 +1,168 @@
 {
     "layer": "top",
     "position": "top",
-    "height": 40,
+    "height": "100%",
     "width": "100%",
-    "margin-top": 10,
+    "margin-top": 0,
     "margin-bottom": 0,
     "margin-left": 10,
     "margin-right": 10,
     "modules-left": [
-      "clock",
-      // "custom/separator",
-      // "hyprland/workspaces",
-      "custom/separator",
-      "tray",
-      "custom/playerctl"
+        "clock",
+        "custom/playerctl"
     ],
     "modules-center": [
-      // "hyprland/window"
-      "hyprland/workspaces"
+        "hyprland/workspaces"
     ],
     "modules-right": [
-      "custom/updates",
-      "custom/keyboard-layout",
-      "memory",
-      "cpu",
-      "pulseaudio",
-      "battery",
-      "backlight",
-      "network",
-      "custom/separator",
-      "custom/powermenu"
+        "tray",
+        "custom/updates",
+        "group/hardware",
+        "group/scrollables",
+        "battery",
+        "custom/powermenu"
     ],
-    "custom/separator": {
-      "exec": "echo \"|\"",
-      "format": "{}"
-    },
-    "tray": {
-      "icon-size": 16,
-      "spacing": 8
-    },
     "clock": {
-      // 24 hour
-      "format": "  {:%a %d %b  %H:%M} ",
-      // 12 hour
-      // "format": " 󰸗 {:%I:%M %p} ",
-      "interval": 60,
-      "tooltip": true,
-      "tooltip-format": "{:%d %B %H:%M}"
-      // "on-click": "~/.config/waybar/scripts/OCV"
-    },
-    "hyprland/workspaces": {
-      "format": "{icon}",
-      "separate-outputs": false,
-      "active-only": false,
-      // turn on true to show same all workspaces on each monitor
-      "all-outputs": false,
-      "format-icons": {
-        // 1-10
-        "1": "1",
-        "2": "2",
-        "3": "3",
-        "4": "4",
-        "5": "5",
-        "6": "6",
-        "7": "7",
-        "8": "8",
-        "9": "9",
-        "10": "10",
-        // 11-10
-        "11": "1",
-        "12": "2",
-        "13": "3",
-        "14": "4",
-        "15": "5",
-        "16": "6",
-        "17": "7",
-        "18": "8",
-        "19": "9",
-        "110": "10"
-        
-        // // 1-10
-        // "1": "一",
-        // "2": "二",
-        // "3": "三",
-        // "4": "四",
-        // "5": "五",
-        // "6": "六",
-        // "7": "七",
-        // "8": "八",
-        // "9": "九",
-        // "10": "十",
-        // // 11-10
-        // "11": "一",
-        // "12": "二",
-        // "13": "三",
-        // "14": "四",
-        // "15": "五",
-        // "16": "六",
-        // "17": "七",
-        // "18": "八",
-        // "19": "九",
-        // "110": "十"
-        }
-    },
-    "hyprland/window": {
-      "format": "{}"
-    },
-    "backlight": {
-      // "device": "acpi_video1",
-      "format": "{icon} {percent: >3}%",
-      "format-icons": ["", ""],
-      "on-scroll-down": "brightnessctl -c backlight set 1%-",
-      "on-scroll-up": "brightnessctl -c backlight set +1%",
-      "on-click": "~/.config/waybar/scripts/backlight-hint.sh"
-    },
-    "network": {
-      "format": " 󰖩",
-      // "tooltip": "{ifname}",
-      "tooltip-format": "{essid}",
-      "interval": 2,
-      "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-      "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
-      "on-click": "nm-connection-editor"
-    },
-    "temperature": {
-      "format": "{icon} {temperatureC}°C ",
-      "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-      "critical-threshold": 80,
-      "format-icons": [
-        "",
-        "",
-        ""
-      ]
-    },
-    "memory": {
-      "format": "󰫗 {}% ",
-      "tooltip": "false",
-      "on-click": "alacritty -e htop"
-    },
-    "cpu": {
-      "format": " {usage}% ",
-      "tooltip": "false",
-      "on-click": "alacritty -e htop"
-    },
-    "pulseaudio": {
-      "scroll-step": 3, // %, can be a float
-      "format": "{icon} {volume}% {format_source}",
-      "format-bluetooth": "{volume}% {icon} {format_source}",
-      "format-bluetooth-muted": " {icon} {format_source}",
-      "format-muted": " {format_source}",
-      //"format-source": "{volume}% ",
-      //"format-source-muted": "",
-      "format-source": "",
-      "format-source-muted": "",
-      "format-icons": {
-          "headphone": "",
-          "hands-free": "",
-          "headset": "",
-          "phone": "",
-          "portable": "",
-          "car": "",
-          "default": ["", "", ""]
-      },
-      "on-click": "pavucontrol",
-      "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-      },
-    "battery": {
-      "states": {
-        // "good": 95,
-        "warning": 30,
-        "critical": 15
-    },
-    "format": "{icon} {capacity: >3}% ",
-    "format-icons": ["", "", "", "", ""]
-    },
-    "custom/updates": {
-      "format": "{} {icon}",
-      "return-type": "json",
-      "format-icons": {
-          "has-updates": "󱍷",
-          "updated": "󰂪",
-       "interval": 7200,
-      },
-      "exec-if": "which waybar-module-pacman-updates",
-      "exec": "waybar-module-pacman-updates",
-      "on-click": "alacritty -e update"
-    },
-    "custom/keyboard-layout": {
-      "format": " Cheat", // Icon: keyboard
-      "on-click": "~/.config/waybar/scripts/keyhint.sh"
-    },
-    "custom/powermenu": {
-      "format": "  ",
-      "tooltip": false,
-      "on-click": "nwgbar"
+        "format": "{:%a %d %b  %H:%M }",
+        "interval": 60,
+        "tooltip": true,
+        "tooltip-format": "{:%d %B %H:%M}",
+        "on-click": "~/.config/waybar/scripts/OCV"
     },
     "custom/playerctl": {
-      "type": "custom/script",
-      "exec": "~/.config/waybar/scripts/playerctl-module.sh",
-      "interval": 5,
-      "on-click": "playerctl play-pause",
-      "on-scroll-up": "playerctl next",
-      "on-scroll-down": "playerctl previous"
+        "type": "custom/script",
+        "exec": "~/.config/waybar/scripts/playerctl-module.sh",
+        "interval": 1,
+        "on-click": "playerctl -p spotify play-pause",
+        "on-scroll-up": "playerctl -p spotify next",
+        "on-scroll-down": "playerctl -p spotify previous"
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "separate-outputs": false,
+        "active-only": false,
+        "all-outputs": false,
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9",
+            "10": "10",
+            "11": "1",
+            "12": "2",
+            "13": "3",
+            "14": "4",
+            "15": "5",
+            "16": "6",
+            "17": "7",
+            "18": "8",
+            "19": "9",
+            "110": "10"
+        }
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 8
+    },
+    "custom/updates": {
+        "format": "{} {icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": "󱍷",
+            "updated": "󰂪",
+            "interval": 7200
+        },
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates",
+        "on-click": "alacritty -e update"
+    },
+    "group/hardware": {
+        "orientation": "horizontal",
+        "modules": [
+            "memory",
+            "cpu"
+        ],
+        "on-click": "alacritty -e htop"
+    },
+    "temperature": {
+        "format": "{temperatureC}°C  ",
+        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "memory": {
+        "format": "{percentage}%   "
+    },
+    "cpu": {
+        "format": "{usage}%  "
+    },
+    "group/scrollables": {
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "backlight"
+        ]
+    },
+    "pulseaudio": {
+        "scroll-step": 5,
+        "format": "{volume}% {icon}  ",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
+    },
+    "backlight": {
+        "format": "{percent: >3}% {icon} ",
+        "format-icons": [
+            "",
+            ""
+        ],
+        "on-scroll-down": "brightnessctl -c backlight set 5%-",
+        "on-scroll-up": "brightnessctl -c backlight set +5%"
+    },
+    "battery": {
+        "states": {
+            "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity: >3}% {icon} ",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "custom/powermenu": {
+        "format": " ",
+        "tooltip": false,
+        "on-click": "nwgbar"
     }
-
-  }
+}
