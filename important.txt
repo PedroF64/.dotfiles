@@ -1,10 +1,11 @@
 OS: Arch Linux
 WM: hyprland
 Compositor: wayland
-Bar: waybar
-wallpapers: wpaperd
+Bar: waybar DONE
+wallpapers: wpaperd DONE
 Terminal: kitty
-fetch: fastfetch
+Terminal Font: JetbrainsMonoNL 14
+fetch: fastfetch DONE
 Shell: fish
 
 Application Launcher: wofi
