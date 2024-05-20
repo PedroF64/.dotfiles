@@ -1,12 +1,14 @@
 OS: Arch Linux
 WM: hyprland
 Compositor: wayland
-Bar: waybar DONE
+Bar: waybar DONE (waybar-module-pacman-updates-git)
 wallpapers: wpaperd DONE
 Terminal: kitty
 Terminal Font: JetbrainsMonoNL 14
+Terminal Prompt: starship DONE
 fetch: fastfetch DONE
 Shell: fish
+
 
 Application Launcher: wofi
 Notification Deamon: dunst
@@ -19,4 +21,4 @@ Login manager: sddm
 Button bar: nwg-bar
 Launcher: nwg-drawer
 Look and feel: nwg-look
-Display management: nwg-displays
+Display management: wdisplays

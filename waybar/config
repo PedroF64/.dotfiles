@@ -147,9 +147,9 @@
     },
     "battery": {
         "states": {
-            "good": 95,
-            "warning": 30,
-            "critical": 15
+            "good": 100,
+            "warning": 60,
+            "critical": 30
         },
         "format": "{capacity: >3}% {icon} ",
         "format-icons": [
