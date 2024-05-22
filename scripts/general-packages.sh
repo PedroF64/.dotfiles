@@ -67,7 +67,6 @@ packagesPacman=(
     "rofi-wayland"
     "wofi"
     "btop"
-    "firefox"
 );
 
 packagesParu=(
@@ -79,4 +78,6 @@ packagesParu=(
     "pacseek"
     "wdisplays"
     "waybar-module-pacman-updates-git"
+    "visual-studio-code-bin"
+    "librewolf"
 );
