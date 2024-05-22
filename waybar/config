@@ -27,7 +27,7 @@
         "interval": 60,
         "tooltip": true,
         "tooltip-format": "{:%d %B %H:%M}",
-        "on-click": "~/.dotfiles/waybar/scripts/OCV"
+        "on-click": "~/.dotfiles/waybar/scripts/calendar.sh"
     },
     "custom/playerctl": {
         "type": "custom/script",
@@ -79,7 +79,7 @@
         },
         "exec-if": "which waybar-module-pacman-updates",
         "exec": "waybar-module-pacman-updates",
-        "on-click": "kitty -e update"
+        "on-click": "kitty update"
     },
     "group/hardware": {
         "orientation": "horizontal",
@@ -114,10 +114,10 @@
     },
     "pulseaudio": {
         "scroll-step": 5,
-        "format": "{volume}% {icon}  ",
+        "format": "{volume}% {icon}  {format_source}  ",
         "format-bluetooth": "{volume}% {icon} {format_source}",
         "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
+        "format-muted": "  {format_source}  ",
         "format-source": "",
         "format-source-muted": "",
         "format-icons": {

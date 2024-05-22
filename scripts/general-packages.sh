@@ -67,6 +67,7 @@ packagesPacman=(
     "rofi-wayland"
     "wofi"
     "btop"
+    "firefox"
 );
 
 packagesParu=(
@@ -76,6 +77,6 @@ packagesParu=(
     "bibata-cursor-theme" 
     "trizen"
     "pacseek"
-    "firedragon"
     "wdisplays"
+    "waybar-module-pacman-updates-git"
 );

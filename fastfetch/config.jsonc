@@ -1,7 +1,7 @@
 {
     "$schema": "",
     "logo": {
-        "source": "$HOME/.config/fastfetch/logo/arch_ascii_1.txt",
+        "source": "$HOME/.dotfiles/fastfetch/logo/arch_ascii_1.txt",
         "padding": {
             "top": 0
         },

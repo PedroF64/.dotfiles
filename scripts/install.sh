@@ -1,9 +1,11 @@
 #!/bin/bash
 
-# Ensure install-packages.sh is executable
+# Ensure everything is executable
 chmod +x install-packages.sh
 chmod +x create-symlinks.sh
+chmod +x install-nvidia.sh
 
-# Run the install-packages.sh script
+# Run all scripts
 ./install-packages.sh
+./install-nvidia.sh
 ./create-symlinks.sh
