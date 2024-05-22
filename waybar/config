@@ -27,11 +27,11 @@
         "interval": 60,
         "tooltip": true,
         "tooltip-format": "{:%d %B %H:%M}",
-        "on-click": "~/.config/waybar/scripts/OCV"
+        "on-click": "~/.dotfiles/waybar/scripts/OCV"
     },
     "custom/playerctl": {
         "type": "custom/script",
-        "exec": "~/.config/waybar/scripts/playerctl-module.sh",
+        "exec": "~/.dotfiles/waybar/scripts/playerctl-module.sh",
         "interval": 1,
         "on-click": "playerctl -p spotify play-pause",
         "on-scroll-up": "playerctl -p spotify next",
@@ -79,7 +79,7 @@
         },
         "exec-if": "which waybar-module-pacman-updates",
         "exec": "waybar-module-pacman-updates",
-        "on-click": "alacritty -e update"
+        "on-click": "kitty -e update"
     },
     "group/hardware": {
         "orientation": "horizontal",
@@ -87,7 +87,7 @@
             "memory",
             "cpu"
         ],
-        "on-click": "alacritty -e htop"
+        "on-click": "kitty -e htop"
     },
     "temperature": {
         "format": "{temperatureC}°C  ",
@@ -163,6 +163,6 @@
     "custom/powermenu": {
         "format": " ",
         "tooltip": false,
-        "on-click": "nwgbar"
+        "on-click": "wlogout"
     }
 }

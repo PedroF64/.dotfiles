@@ -1,24 +1,26 @@
 OS: Arch Linux
 WM: hyprland
 Compositor: wayland
-Bar: waybar DONE (waybar-module-pacman-updates-git)
-wallpapers: wpaperd DONE
-Terminal: kitty
-Terminal Font: JetbrainsMonoNL 14
+Bar: waybar DONE
+Terminal: kitty DONE
+Terminal Font: JetbrainsMonoNL 14 ????
 Terminal Prompt: starship DONE
 fetch: fastfetch DONE
-Shell: fish
+Shell: fish DONE
+Browser: Firedragon
 
+Application Launcher: wofi DONE needs to change to rofi-wayland
+Notification Deamon: mako DONE
+file explorer: thunar DONE 
 
-Application Launcher: wofi
-Notification Deamon: dunst
-file explorer: dolphin
+screenlock: hyprlock DONE
+screenidle: hypridle DONE
+wallpapers: hyprpaper DONE
+Login manager: sddm ????
 
-screenlock: swaylock
-screenidle: swayidle
-Login manager: sddm
+Button bar: wlogout DONE
+Launcher: nwg-drawer (NO NEED)
+Look and feel: nwg-look DONE
+Display management: wdisplays ???
+System monitor: btop DONE
 
-Button bar: nwg-bar
-Launcher: nwg-drawer
-Look and feel: nwg-look
-Display management: wdisplays
