@@ -109,6 +109,21 @@
             "type": "custom"
         },
         // {
+        //     "key": " TT",
+        //     "keyColor": "red",
+        //     "type": "theme"
+        // },
+        // {
+        //     "key": " TF ",
+        //     "keyColor": "red",
+        //     "type": "font"
+        // },
+        // {
+        //     "key": " TI ",
+        //     "keyColor": "red",
+        //     "type": "icons"
+        // },
+        // {
         //     "format": " ",
         //     "key": "   \\e[38m                            ",
         //     "type": "custom"

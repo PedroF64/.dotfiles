@@ -159,6 +159,22 @@ alias tb 'nc termbin.com 9999'
 alias helpme 'echo "To print basic information about a command use tldr <command>"'
 alias pacdiff 'sudo -H DIFFPROG=meld pacdiff'
 
+# Git aliases
+alias g 'git'
+alias ga 'git add'
+alias gaa 'git add .'
+alias gb 'git branch'
+alias gc 'git commit -m'
+alias gco 'git checkout'
+alias gd 'git diff'
+alias gf 'git fetch'
+alias gl 'git log'
+alias gm 'git merge'
+alias gp 'git pull'
+alias gps 'git push'
+alias gr 'git rebase'
+alias gs 'git status'
+
 # Get the error messages from journalctl
 alias jctl 'journalctl -p 3 -xb'
 
