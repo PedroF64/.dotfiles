@@ -77,7 +77,7 @@
             "type": "disk"
         },
         {
-            "key": " ╰─ ⏲ ",
+            "key": " ╰─ ⏱ ",
             "keyColor": "blue",
             "type": "uptime"
         },

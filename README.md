@@ -22,29 +22,26 @@ Hey there! Before you dive headfirst into the world of my dotfiles, there are a 
 
 ### Remember, with great power comes great responsibility. Proceed with caution, and may your hacking adventures be fruitful and bug-free! 🚀💻
 
-
 ## Tools
 
-- [wayland](https://wayland.freedesktop.org/) - Computer display server protocol.
-- [hyprland](https://hyprland.org/) - Window manager.
-- [hyprpaper](https://github.com/hyprwm/hyprpaper) - Blazing fast wallpaper utility for Hyprland.
-- [hyprlock](https://github.com/hyprwm/hyprlock/) - Hyprland's simple, yet multi-threaded and GPU-accelerated screen locking utility.
-- [hypridle](https://github.com/hyprwm/hypridle) - Hyprland's idle daemon.
-- [waybar](https://github.com/Alexays/Waybar) - Status bar.
-- [kitty](https://github.com/kovidgoyal/kitty) - Fast GPU-accelerated terminal.
-- [fish](https://fishshell.com/) - Smart and user-friendly command line shell.
-- [starship](https://starship.rs/) - The minimal, blazing-fast, and infinitely customizable prompt.
-- [fastfetch](https://github.com/fastfetch-cli/fastfetch) - Tool for fetching system information and displaying them in a pretty way.
-- [btop](https://github.com/aristocratos/btop) - Resource monitor.
-- [mako](https://github.com/emersion/mako) - A lightweight notification daemon for Wayland.
-- [wofi](https://sr.ht/~scoopta/wofi/) - Wofi is a launcher/menu program for wlroots.
-- [rofi](https://github.com/davatorium/rofi) - A window switcher, Application launcher and dmenu replacement. (Not in use)
-- [wlogout](https://github.com/ArtsyMacaw/wlogout) - Logout menu for wayland environments.
-- [librewolf](https://librewolf.net/) - Custom and independent version of Firefox, with the primary goals of privacy, security and user freedom.
-- [wl-clipboard](https://github.com/bugaevc/wl-clipboard) - Wayland clipboard utilities.
-- [cliphist](https://github.com/sentriz/cliphist) - Clipboard history “manager” for wayland.
-- [paru](https://github.com/Morganamilo/paru) - Feature packed AUR helper.
-
+-   [wayland](https://wayland.freedesktop.org/) - Computer display server protocol.
+-   [hyprland](https://hyprland.org/) - Window manager.
+-   [hyprpaper](https://github.com/hyprwm/hyprpaper) - Blazing fast wallpaper utility for Hyprland.
+-   [hyprlock](https://github.com/hyprwm/hyprlock/) - Hyprland's simple, yet multi-threaded and GPU-accelerated screen locking utility.
+-   [hypridle](https://github.com/hyprwm/hypridle) - Hyprland's idle daemon.
+-   [waybar](https://github.com/Alexays/Waybar) - Status bar.
+-   [kitty](https://github.com/kovidgoyal/kitty) - Fast GPU-accelerated terminal.
+-   [fish](https://fishshell.com/) - Smart and user-friendly command line shell.
+-   [starship](https://starship.rs/) - The minimal, blazing-fast, and infinitely customizable prompt.
+-   [fastfetch](https://github.com/fastfetch-cli/fastfetch) - Tool for fetching system information and displaying them in a pretty way.
+-   [btop](https://github.com/aristocratos/btop) - Resource monitor.
+-   [mako](https://github.com/emersion/mako) - A lightweight notification daemon for Wayland.
+-   [wofi](https://sr.ht/~scoopta/wofi/) - Wofi is a launcher/menu program for wlroots.
+-   [wlogout](https://github.com/ArtsyMacaw/wlogout) - Logout menu for wayland environments.
+-   [librewolf](https://librewolf.net/) - Custom and independent version of Firefox, with the primary goals of privacy, security and user freedom.
+-   [wl-clipboard](https://github.com/bugaevc/wl-clipboard) - Wayland clipboard utilities.
+-   [cliphist](https://github.com/sentriz/cliphist) - Clipboard history “manager” for wayland.
+-   [paru](https://github.com/Morganamilo/paru) - Feature packed AUR helper.
 
 ## Usage
 
@@ -57,5 +54,5 @@ $ reboot
 
 ## Configs to be added
 
-- [sddm](https://github.com/sddm/sddm) - SDDM is a modern display manager for X11 and Wayland sessions aiming to be fast, simple and beautiful.
-- [grub](https://www.gnu.org/software/grub/) - Multiboot boot loader.
+-   [sddm](https://github.com/sddm/sddm) - SDDM is a modern display manager for X11 and Wayland sessions aiming to be fast, simple and beautiful.
+-   [grub](https://www.gnu.org/software/grub/) - Multiboot boot loader.

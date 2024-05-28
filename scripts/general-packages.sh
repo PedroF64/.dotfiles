@@ -10,7 +10,6 @@ packagesPacman=(
     "hyprlock"
     "hypridle"
     "pacman-contrib"
-    "vim"
     "nano"
     "bluez"
     "bluez-utils"
@@ -64,7 +63,6 @@ packagesPacman=(
     "jq"
     "fish"
     "fastfetch"
-    "rofi-wayland"
     "wofi"
     "btop"
 );
@@ -80,4 +78,8 @@ packagesParu=(
     "waybar-module-pacman-updates-git"
     "visual-studio-code-bin"
     "librewolf"
+    "spotify-adblock-git"
+    "webcord"
 );
+
+# steam
