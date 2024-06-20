@@ -1,5 +1,5 @@
 window#waybar {
-    font-family: "JetBrains Mono NerdFont";
+    font-family: "JetBrains Mono";
     background-color: rgba(0, 0, 0, 0);
     color: rgb(230, 230, 230);
     font-size: 1.2rem;
@@ -7,7 +7,7 @@ window#waybar {
 }
 
 tooltip {
-    font-family: "JetBrains Mono NerdFont";
+    font-family: "JetBrains Mono";
     font-size: 0.8rem;
 }
 
