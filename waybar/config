@@ -1,41 +1,202 @@
 {
+    "name": "bar0",
     "layer": "top",
     "position": "top",
-    "height": "100%",
-    "width": "100%",
-    "margin-top": 0,
+    "height": 40,
+    "margin-top": 10,
+    "margin-left": 18,
+    "margin-right": 18,
     "margin-bottom": 0,
-    "margin-left": 10,
-    "margin-right": 10,
+    "spacing": 3,
+    "reload_style_on_change": true,
     "modules-left": [
-        "clock",
-        "custom/playerctl"
+        "hyprland/workspaces",
+        "custom/lineseperator",
+        "tray"
     ],
     "modules-center": [
-        "hyprland/workspaces"
+        "custom/buttonspace",
+        "clock#date",
+        "custom/buttonspace",
+        "image#arch",
+        "custom/buttonspace",
+        "clock#time",
+        "custom/buttonspace"
     ],
     "modules-right": [
-        "tray",
-        "custom/updates",
-        "group/hardware",
-        "group/scrollables",
+        "custom/media",
+        "custom/buttonspace",
+        "wireplumber",
+        "pulseaudio",
+        "backlight",
+        "custom/lineseperator",
+        "memory",
+        "cpu",
+        "network",
         "battery",
-        "custom/powermenu"
+        "custom/buttonspace",
+        "image#powermenu"
     ],
-    "clock": {
-        "format": "{:%a %d %b  %H:%M }",
-        "interval": 60,
-        "tooltip": true,
-        "tooltip-format": "{:%d %B %H:%M}",
-        "on-click": "~/.dotfiles/waybar/scripts/calendar.sh"
+    "image#arch": {
+        "tooltip": false,
+        "tooltip-format": "Arch Linux",
+        "path": "/home/pedro/.dotfiles/waybar/icons/arch.png",
+        "size": 32
     },
-    "custom/playerctl": {
-        "type": "custom/script",
-        "exec": "~/.dotfiles/waybar/scripts/playerctl-module.sh",
+    "custom/dotseperator": {
+        "format": "•"
+    },
+    "custom/lineseperator": {
+        "format": "|"
+    },
+    "image#powermenu": {
+        "tooltip": true,
+        "tooltip-format": "Power Menu",
+        "path": "/home/pedro/.dotfiles/waybar/icons/power.png",
+        "size": 16,
+        "on-click": "wlogout"
+    },
+    "custom/space": {
+        "tooltip": false,
+        "format": " "
+    },
+    "custom/buttonspace": {
+        "tooltip": false,
+        "format": "‎"
+    },
+    "custom/smallspace": {
+        "tooltip": false,
+        "format": " "
+    },
+    "tray": {
+        "icon-size": 18,
+        "spacing": 10
+    },
+    "clock#date": {
+        "tooltip": true,
+        "format": "{:%a, %b %d}",
+        "tooltip-format": "<small>{calendar}</small>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "right",
+            "on-scroll": 1,
+            "format": {
+                "months": "<span color='#ffead3'><b>{}</b></span>",
+                "days": "<span color='#ecc6d9'><b>{}</b></span>",
+                "weeks": "<span color='#99ffdd'><b>w{}</b></span>",
+                "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+                "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+            }
+        },
+        "actions": {
+            "on-click-right": "mode",
+            "on-click-middle": "shift_reset",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down"
+        }
+    },
+    "clock#time": {
         "interval": 1,
+        "format": "{:%H:%M:%S}",
+        "tooltip": true,
+        "tooltip-format": "{:%H:%M:%S}"
+    },
+    "backlight": {
+        "tooltip": true,
+        "tooltip-format": "{percent}%",
+        "format": "󰌵",
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "on-click": "brightnessctl set 100%"
+    },
+    "wireplumber": {
+        "format": "{icon}",
+        "tooltip-format": "{volume}%",
+        "format-muted": "",
+        "scroll-step": 5,
+        "restart-interval": 0,
+        "on-click": "pavucontrol",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "pulseaudio": {
+        "format": "{format_source}",
+        "format-source": "",
+        "format-source-muted": "",
+        "scroll-step": 5,
+        "restart-interval": 0,
+        "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "",
+        "format-ethernet": "󰊗",
+        "format-disconnected": "",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
+        "max-length": 50,
+        "on-click": "nm-connection-editor"
+    },
+    "battery": {
+        "interval": 10,
+        "format": "{icon}",
+        "format-icons": [
+            "󰂎",
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "tooltip": true,
+        "tooltip-format": "{timeTo} ({capacity}%)\n\nCycles : {cycles}\nPower  : {power}W\nHealth : {health}%"
+    },
+    "disk": {
+        "interval": 15,
+        "format": "󰋊 {percentage_used}%",
+        "tooltip-format": "Used  : {used}\nTotal : {total} ({percentage_used}%)\nDisk  : {path}"
+    },
+    "memory": {
+        "interval": 10,
+        "format": "",
+        "tooltip-format": "Used  : {used}GiB\nTotal : {total}GiB ({percentage}%)"
+    },
+    "cpu": {
+        "interval": 10,
+        "format": "",
+        "tooltip-format": "Usage : {usage}%\nTemp  : {temperature}°C"
+    },
+    "temperature": {
+        "interval": 10
+    },
+    "custom/media": {
+        "type": "custom/script",
+        "interval": 5,
         "on-click": "playerctl -p spotify play-pause",
+        "on-click-right": "",
         "on-scroll-up": "playerctl -p spotify next",
-        "on-scroll-down": "playerctl -p spotify previous"
+        "on-scroll-down": "playerctl -p spotify previous",
+        "exec": "~/.dotfiles/waybar/scripts/playerctl-module.sh"
     },
     "hyprland/workspaces": {
         "format": "{icon}",
@@ -65,104 +226,12 @@
             "110": "10"
         }
     },
-    "tray": {
-        "icon-size": 16,
-        "spacing": 8
-    },
-    "custom/updates": {
-        "format": "{} {icon}",
-        "return-type": "json",
-        "format-icons": {
-            "has-updates": "󱍷",
-            "updated": "󰂪",
-            "interval": 7200
-        },
-        "exec-if": "which waybar-module-pacman-updates",
-        "exec": "waybar-module-pacman-updates",
-        "on-click": "kitty update"
-    },
-    "group/hardware": {
-        "orientation": "horizontal",
-        "modules": [
-            "memory",
-            "cpu"
-        ],
-        "on-click": "kitty -e htop"
-    },
-    "temperature": {
-        "format": "{temperatureC}°C  ",
-        "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
-        "critical-threshold": 80,
-        "format-icons": [
-            "",
-            "",
-            ""
-        ]
-    },
-    "memory": {
-        "format": "{percentage}%   "
-    },
-    "cpu": {
-        "format": "{usage}%  "
-    },
-    "group/scrollables": {
-        "orientation": "horizontal",
-        "modules": [
-            "pulseaudio",
-            "backlight"
-        ]
-    },
-    "pulseaudio": {
-        "scroll-step": 5,
-        "format": "{volume}% {icon}  {format_source}  ",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": "  {format_source}  ",
-        "format-source": "",
-        "format-source-muted": "",
-        "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": [
-                "",
-                "",
-                ""
-            ]
-        },
-        "on-click": "pavucontrol",
-        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
-    },
-    "backlight": {
-        "format": "{percent: >3}% {icon} ",
-        "format-icons": [
-            "",
-            ""
-        ],
-        "on-scroll-down": "brightnessctl -c backlight set 5%-",
-        "on-scroll-up": "brightnessctl -c backlight set +5%"
-    },
-    "battery": {
-        "states": {
-            "good": 100,
-            "warning": 60,
-            "critical": 30
-        },
-        "format": "{capacity: >3}% {icon} ",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
-    },
-    "custom/powermenu": {
-        "format": " ",
-        "tooltip": false,
-        "on-click": "wlogout"
+    "hyprland/window": {
+        "icon": true,
+        "max-length": 80,
+        "icon-size": 20,
+        "rewrite": {
+            "": "🪷hyprland🪷"
+        }
     }
 }

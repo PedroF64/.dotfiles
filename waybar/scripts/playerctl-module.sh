@@ -24,10 +24,10 @@ if pgrep -x "spotify" > /dev/null; then
 
     # If spotify is playing, get metadata for the currently playing track
     if [ "$player_status" = "Playing" ]; then
-        echo "$truncated_metadata | $current_position - $duration"
+        echo " $truncated_metadata "
         exit 0
     else
-        echo "$truncated_metadata | PAUSED"
+        echo " Nothing playing "
         exit 0
     fi
 

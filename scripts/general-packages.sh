@@ -75,7 +75,6 @@ packagesParu=(
     "trizen"
     "pacseek"
     "wdisplays"
-    "waybar-module-pacman-updates-git"
     "visual-studio-code-bin"
     "librewolf"
     "spotify-adblock-git"
