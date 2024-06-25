@@ -65,6 +65,7 @@ packagesPacman=(
     "fastfetch"
     "wofi"
     "btop"
+    "ttf-jetbrains-mono"
 );
 
 packagesParu=(

@@ -13,13 +13,13 @@
         {
             "format": " ",
             "key": "┌─────────────────── OS Information ───────────────────┐",
-            "keyColor": "blue",
+            "keyColor": "magenta",
             "type": "custom"
         },
         {
             "color": {
-                "host": "green",
-                "user": "green"
+                "host": "magenta",
+                "user": "magenta"
             },
             "key": " ╭─  ",
             "keyColor": "green",
@@ -48,7 +48,7 @@
         {
             "format": " ",
             "key": "├──────────────── Hardware Information ────────────────┤",
-            "keyColor": "blue",
+            "keyColor": "magenta",
             "type": "custom"
         },
         {
@@ -84,7 +84,7 @@
         {
             "format": " ",
             "key": "├──────────────── Software Information ────────────────┤",
-            "keyColor": "blue",
+            "keyColor": "magenta",
             "type": "custom"
         },
         {
@@ -105,7 +105,7 @@
         {
             "format": " ",
             "key": "└──────────────────────────────────────────────────────┘",
-            "keyColor": "blue",
+            "keyColor": "magenta",
             "type": "custom"
         },
         // {
